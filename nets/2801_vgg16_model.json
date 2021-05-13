@@ -1,0 +1,22 @@
+{
+    "layer": [
+        {
+            "name": "cnn",
+            "operation": "GTICNN",
+            "device": {
+                "chip": "2801",
+                "type": 0,
+                "emmc delay": 12000,
+                "name": null
+            },
+            "data file": "/home/gti/tensorflow_mdk/nets/chip.dat",
+            "mode": 0,
+            "data offset": 0,
+            "output scaledown": 3,
+            "output channels": 512,
+            "output width": 7,
+            "output height": 7
+        }
+    ],
+    "name": "vgg16"
+}

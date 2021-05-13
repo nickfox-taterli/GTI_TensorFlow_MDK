@@ -1,0 +1,79 @@
+{
+    "layer": [
+        {
+            "coef_bits": 3,
+            "image_size": 224,
+            "input_channels": 3,
+            "major_layer": 1,
+            "output_channels": 64,
+            "pooling": true,
+            "scaling": [
+                12,
+                12
+            ],
+            "sublayer_number": 2
+        },
+        {
+            "coef_bits": 3,
+            "image_size": 112,
+            "input_channels": 64,
+            "major_layer": 2,
+            "output_channels": 128,
+            "pooling": true,
+            "scaling": [
+                11,
+                12
+            ],
+            "sublayer_number": 2
+        },
+        {
+            "coef_bits": 3,
+            "image_size": 56,
+            "input_channels": 128,
+            "major_layer": 3,
+            "output_channels": 256,
+            "pooling": true,
+            "scaling": [
+                11,
+                10,
+                10
+            ],
+            "sublayer_number": 3
+        },
+        {
+            "coef_bits": 1,
+            "image_size": 28,
+            "input_channels": 256,
+            "major_layer": 4,
+            "output_channels": 512,
+            "pooling": true,
+            "scaling": [
+                11,
+                11,
+                10
+            ],
+            "sublayer_number": 3
+        },
+        {
+            "coef_bits": 1,
+            "image_size": 14,
+            "input_channels": 512,
+            "major_layer": 5,
+            "output_channels": 512,
+            "pooling": true,
+            "scaling": [
+                10,
+                10,
+                8
+            ],
+            "sublayer_number": 3
+        }
+    ],
+    "model": [
+        {
+            "ChipType": 2801,
+            "MajorLayerNumber": 5,
+            "SamplingMethod": 0
+        }
+    ]
+}

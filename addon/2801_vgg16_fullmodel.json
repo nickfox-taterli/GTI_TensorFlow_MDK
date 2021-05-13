@@ -1,0 +1,80 @@
+{
+    "layer": [
+        {
+            "data file": null,
+            "data offset": null,
+            "input format": "CS_BGR24_PLANAR",
+            "name": "image reader",
+            "operation": "IMAGEREADER",
+            "output channels": 3,
+            "output format": "CS_BGR24_PLANAR",
+            "output height": 224,
+            "output width": 224
+        },
+        {
+            "data file": "/home/gti/tensorflow_mdk/addon/chip.dat",
+            "data offset": 0,
+            "device": {
+                "chip": "2801",
+                "emmc delay": 12000,
+                "name": null,
+                "type": 0
+            },
+            "mode": 0,
+            "name": "cnn",
+            "operation": "GTICNN",
+            "output channels": 512,
+            "output height": 7,
+            "output scaledown": 3,
+            "output width": 7
+        },
+        {
+            "activation": "relu",
+            "data file": "/home/gti/tensorflow_mdk/addon/fc6.bin",
+            "data offset": 0,
+            "name": "fc6",
+            "operation": "FC",
+            "output channels": 4096,
+            "output height": 1,
+            "output width": 1
+        },
+        {
+            "activation": "relu",
+            "data file": "/home/gti/tensorflow_mdk/addon/fc7.bin",
+            "data offset": 0,
+            "name": "fc7",
+            "operation": "FC",
+            "output channels": 4096,
+            "output height": 1,
+            "output width": 1
+        },
+        {
+            "data file": "/home/gti/tensorflow_mdk/addon/fc8.bin",
+            "data offset": 0,
+            "name": "fc8",
+            "operation": "FC",
+            "output channels": 1000,
+            "output height": 1,
+            "output width": 1
+        },
+        {
+            "data file": null,
+            "data offset": null,
+            "name": "softmax",
+            "operation": "SOFTMAX",
+            "output channels": 1000,
+            "output height": 1,
+            "output width": 1
+        },
+        {
+            "data file": "/home/gti/tensorflow_mdk/data/imagenet_labels.txt",
+            "data offset": 0,
+            "name": "label",
+            "operation": "LABEL",
+            "output channels": 5,
+            "output height": 1,
+            "output width": 1
+        }
+    ],
+    "name": "vgg16"
+}
